@@ -6,7 +6,7 @@ RUN apt-get update \
  && echo 'deb https://deb.nodesource.com/node_8.x stretch main' > /etc/apt/sources.list.d/nodesource.list \
  && echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
  && apt-get update \
- && apt-get install --yes --no-install-recommends python3 python3-pip \
+ && apt-get install --yes --no-install-recommends build-essential python3 python3-pip python3-dev \
  && apt-get install --yes yarn \
  && pip3 install pipenv
 ENV LC_ALL=C.UTF-8 LANG=C.UTF-8 PIPENV_PIPFILE=/code/Pipfile
